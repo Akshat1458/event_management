@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<body class="user-body">
+  <div class="container-fluid">
+    <div class="card mb-3" style="margin:auto; max-width: 1000px">
+      <div class="row g-0">
+        <div class="col-md-6 offset-md-3" style="background:red; opacity:0.5; border:3px solid grey;">
+          <h1 style="text-align:center; padding-top:15px; color:white;"><%=data[0].name%></h1>
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><div class="row"><div class="col-4"><strong>AGE: </strong></div><div class="col-8"><%=data[0].age%></div></div> </li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>GENDER: </strong></div><div class="col-8"><%=data[0].gender%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>MOBILE: </strong></div><div class="col-8"><%=data[0].mobile%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>EMAIL: </strong></div><div class="col-8"><%=data[0].email%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>ADDRESS: </strong></div><div class="col-8"><%=data[0].address%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>COUNTRY: </strong></div><div class="col-8"><%=data[0].country%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>STATE: </strong></div><div class="col-8"><%=data[0].state%></div></div></li>
+              <li class="list-group-item"><div class="row"><div class="col-4"> <strong>PIN: </strong></div><div class="col-8"><%=data[0].pin%></div></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-3 mx-auto">
+    <a href="/updateinfo" class="btn btn-dark">UPDATE INFO</a>
+    </div>
+  </div>
+<%- include('partials/footer'); -%>

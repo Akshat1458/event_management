@@ -1,0 +1,62 @@
+<%- include('partials/header'); -%>
+<body class="user-body">
+  <div class="container">
+    <h1 id="userHeading">Update Details</h1>
+    <form action="/updateinfo" method="post">
+      <div class="row g-3 center_div fadeInDown">
+
+        <div class="col-sm-12">
+          <label for="firstName" class="form-label">Name</label>
+          <input type="text" class="form-control" value='<%= data[0].name%>' name="name" id="firstName">
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control"  value="<%= data[0].email%>" name="email" id="email" placeholder="you@example.com">
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Mobile Number</label>
+          <input type="text" name="mobile" class="form-control" value="<%= data[0].mobile%>">
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Age</label>
+          <input type="text" name="age" class="form-control" value="<%= data[0].age%>" id="lastName">
+        </div>
+
+
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" name="address" class="form-control" value="<%= data[0].address%>" id="address" placeholder="1234 Main St" required="">
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" class="form-control" value='<%= data[0].country%>' name="country" id="country">
+        </div>
+
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <input type="text" class="form-control" value='<%= data[0].state%>' name="state" id="state">
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">pin</label>
+          <input type="text" class="form-control" name="pin" id="zip" placeholder="" required="" value="<%= data[0].pin%>">
+        </div>
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary btn-lg btn-dark" onclick="alert('successfully Updated')">SUBMIT</button>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+<%- include('partials/footer'); -%>

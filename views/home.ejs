@@ -1,0 +1,40 @@
+<%- include('partials/header'); -%>
+<body class="home-body">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="images/management.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="images/event.png" class="d-block w-100 image-size" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<div class="container info" >
+  <%if(user==="organiser"){%>
+
+    <ol>
+      <li class="lines"><h4>Click on new event to add an event</h4></li>
+      <li class="lines"><h4>click on events to see all the events.</h4></li>
+      <li class="lines"><h4>click on My events to modify your events.</h4></li>
+      <li class="lines"><h4>Click on Dashboard to update your info.</h4></li>
+    </ol>
+
+  <%}%>
+  <%if(user==="participant"){%>
+    <ol>
+      <li class="lines"><h4>Click on New events to check your registered events and cancel registration.</h4></li>
+      <li class="lines"><h4>click on events to see all the events and register for them.</h4></li>
+      <li class="lines"><h4>Click on Dashboard to update your info.</h4></li>
+    </ol>
+
+  <%}%>
+
+</div>
+<%- include('partials/footer'); -%>

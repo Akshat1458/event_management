@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+<body class="user-body">
+<div class="container">
+
+
+<h1 id="userHeading">Registered Participants</h1>
+
+<%if(data.length===0){%>
+<h2 style="color:white; text-align:center; margin-top:50px;">NO participant yet</h2>
+<%}else{%>
+
+  <table class="table table-dark table-striped table-hover" >
+    <tr>
+      <th>S.NO</th>
+      <th>NAME</th>
+    </tr>
+    <%for(var i=0;i<data.length;i++){%>
+      <tr>
+        <td><%=i+1%></td>
+        <td><%=data[i].name%></td>
+      </tr>
+    <%}%>
+
+  </table>
+
+<%}%>
+
+</div>
+
+<%- include('partials/footer'); -%>

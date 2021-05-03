@@ -1,0 +1,62 @@
+<%- include('partials/header'); -%>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <%data.forEach(function(d){%>
+      <!-- <div class="col-lg-6">
+        <div class="card mb-3" style="max-width: 600px; margin-top:20px; margin-bottom:20px;">
+          <div class="row g-0">
+            <div class="col-md-4" style="background:red; opacity:0.5; border:3px solid grey;">
+              <h1 style="text-align:center; padding-top:15px; color:white;"><%=d.name%></h1>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="card-text"><%=d.descrip%></p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Date:<%=d.date%> Time:<%=d.time%></li>
+                  <li class="list-group-item"><%=d.venue%></li>
+                  <li class="list-group-item">organiser</li>
+                </ul>
+                  <a href="/delete/<%=d.e_id%>" class="btn btn-dark">Delete</a>
+                  <a href="/update/<%=d.e_id%>" class="btn btn-dark">Update</a>
+                  <a href="#" class="btn btn-dark">Register</a>
+                  <a href="#" class="btn btn-dark">Participants</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> -->
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem; margin-top:15px; margin-bottom:15px;">
+          <svg width="400" height="180">
+            <rect x="0" y="0" rx="0" ry="20" width="18rem" height="160" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+            <text fill="#ffffff" font-size="30" font-family="Verdana" x="50" y="86"><%=d.name%></text>
+          </svg>
+          <div class="card-body">
+            <p class="card-text"><%=d.descrip%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Date:<%=d.date%> Time:<%=d.time%></li>
+            <li class="list-group-item"><%=d.venue%></li>
+          </ul>
+          <div class="card-body">
+            <%if(user==="participant"){%>
+            <a href="/register/<%=d.e_id%>" onclick="alert('Successfully Registered')" class="btn btn-dark card-link">Register</a>
+            <%}%>
+            <a href="/participants/<%=d.e_id%>" class="btn btn-dark card-link">Participants</a>
+
+
+          </div>
+        </div>
+      </div>
+      <%});%>
+
+    </div>
+
+
+
+
+  </div>
+  <%- include('partials/footer'); -%>
